@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Graphite: Lawnchair provides Recents (Quickstep) -->
+    <string name="config_recentsComponentName" translatable="false"
+            >app.lawnchair/com.android.quickstep.RecentsActivity</string>
+</resources>
