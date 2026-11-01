@@ -3,4 +3,8 @@
 
 # Graphite settings app (Settings → System → Graphite)
 PRODUCT_PACKAGES += \
-    GraphiteParts
+    GraphiteParts \
+    GraphiteClocks
+
+# Resource overlays for GrapheneOS components (e.g. SystemUI's plugin allowlist)
+PRODUCT_PACKAGE_OVERLAYS += vendor/graphite/overlay
