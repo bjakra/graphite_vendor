@@ -8,6 +8,10 @@ android_app_import {
     certificate: "platform",
     privileged: true,
     system_ext_specific: true,
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
     required: ["privapp-permissions-lawnchair"],
 }
 
