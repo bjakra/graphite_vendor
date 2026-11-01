@@ -1,0 +1,20 @@
+// Lawnchair (Graphite fork with Android 17 Quickstep), built by tools/apps/build-lawnchair.sh.
+// Platform-signed privileged app so Quickstep's signature permissions are granted; it is the
+// recents provider (overlay config_recentsComponentName) and the default home (HOME priority 1).
+// GrapheneOS' Launcher3 stays installed as a fallback home.
+android_app_import {
+    name: "GraphiteLawnchair",
+    apk: "Lawnchair.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    required: ["privapp-permissions-lawnchair"],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-lawnchair",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+    src: "privapp-permissions-lawnchair.xml",
+    filename_from_src: true,
+}
