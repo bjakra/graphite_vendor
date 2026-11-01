@@ -10,5 +10,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GraphiteLawnchair
 
-# Resource overlays for GrapheneOS components (e.g. SystemUI's plugin allowlist)
-PRODUCT_PACKAGE_OVERLAYS += vendor/graphite/overlay
+# Resource overlays for GrapheneOS components (recents provider, SystemUI's plugin allowlist).
+# Named RRO modules, not PRODUCT_PACKAGE_OVERLAYS: that generates
+# framework-res__<device>__auto_generated_rro_product, which conflicts with the module of the
+# same name in adevtool's vendor/google_devices/<device>/overlays.
+PRODUCT_PACKAGES += \
+    GraphiteFrameworkOverlay \
+    GraphiteSystemUIOverlay
