@@ -28,7 +28,9 @@
         <permission name="android.permission.MANAGE_EXTERNAL_STORAGE" />
         <permission name="android.permission.MANAGE_KEY_GESTURES" />
         <permission name="android.permission.MANAGE_USERS" />
+        <permission name="android.permission.MODIFY_DAY_NIGHT_MODE" />
         <permission name="android.permission.MONITOR_INPUT" />
+        <permission name="android.permission.NETWORK_AIRPLANE_MODE" />
         <permission name="android.permission.PACKAGE_USAGE_STATS" />
         <permission name="android.permission.PERSONAL_CONTEXT_HOST_INSIGHT_SURFACE" />
         <permission name="android.permission.PERSONAL_CONTEXT_PUBLISH_HINTS" />
@@ -36,6 +38,7 @@
         <permission name="android.permission.PERSONAL_CONTEXT_RECEIVE_INSIGHTS" />
         <permission name="android.permission.POST_NOTIFICATIONS" />
         <permission name="android.permission.QUERY_ALL_PACKAGES" />
+        <permission name="android.permission.READ_CALENDAR" />
         <permission name="android.permission.READ_CONTACTS" />
         <permission name="android.permission.READ_DEVICE_CONFIG" />
         <permission name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -65,5 +68,6 @@
         <permission name="android.permission.WAKEUP_SURFACE_FLINGER" />
         <permission name="android.permission.WRITE_HISTORY_BOOKMARKS" />
         <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+        <permission name="android.permission.WRITE_SETTINGS" />
     </privapp-permissions>
 </permissions>

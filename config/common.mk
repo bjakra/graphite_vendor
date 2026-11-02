@@ -9,10 +9,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GraphiteLawnchair
 
-# Search app, opened by Lawnchair's hotseat search bar (prebuilt/Search)
-PRODUCT_PACKAGES += \
-    GraphiteSearch
-
 # Google's lockscreen clocks from the stock image, refreshed by tools/apps/import-pixel-clocks.sh
 PRODUCT_PACKAGES += \
     SystemUIClocks-BigNum \
