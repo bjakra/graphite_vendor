@@ -3,8 +3,7 @@
 
 # Graphite settings app (Settings → System → Graphite)
 PRODUCT_PACKAGES += \
-    GraphiteParts \
-    GraphiteClocks
+    GraphiteParts
 
 # Lawnchair: default home and recents provider (prebuilt/Lawnchair, overlay in overlay/)
 PRODUCT_PACKAGES += \
@@ -13,6 +12,19 @@ PRODUCT_PACKAGES += \
 # Search app, opened by Lawnchair's hotseat search bar (prebuilt/Search)
 PRODUCT_PACKAGES += \
     GraphiteSearch
+
+# Google's lockscreen clocks, imported from the stock image (tools/apps/import-pixel-clocks.sh).
+# Proprietary, so not in this repo.
+ifneq ($(wildcard vendor/graphite/prebuilt/PixelClocks/Android.bp),)
+PRODUCT_PACKAGES += \
+    SystemUIClocks-BigNum \
+    SystemUIClocks-Calligraphy \
+    SystemUIClocks-Growth \
+    SystemUIClocks-Inflate \
+    SystemUIClocks-Metro \
+    SystemUIClocks-NumOverlap \
+    SystemUIClocks-Weather
+endif
 
 # Resource overlays for GrapheneOS components (recents provider, SystemUI's plugin allowlist).
 # Named RRO modules, not PRODUCT_PACKAGE_OVERLAYS: that generates
