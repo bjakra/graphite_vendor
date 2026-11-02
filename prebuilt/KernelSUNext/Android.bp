@@ -1,0 +1,13 @@
+// KernelSU-Next manager, the upstream release APK from github.com/KernelSU-Next/KernelSU-Next v3.4.2.
+// It stays untouched, because the kernel only accepts a manager with this signature. Root is granted per
+// app in the manager, and no app has it by default. arm64 only, so the emulator doesn't ship it.
+android_app_import {
+    name: "GraphiteKernelSUNext",
+    apk: "KernelSUNext.apk",
+    preprocessed: true,
+    skip_preprocessed_apk_checks: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}

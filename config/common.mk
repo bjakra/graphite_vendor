@@ -12,6 +12,16 @@ PRODUCT_PACKAGES += \
     GraphiteClassicPowerMenu \
     GraphiteSmartspacer
 
+# KernelSU-Next manager (arm64 only): real devices, not the emulator
+ifeq ($(filter sdk_phone%,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += \
+    GraphiteKernelSUNext \
+    graphite_ksu_libadbroot \
+    graphite_ksu_libandroidx.graphics.path \
+    graphite_ksu_libkernelsu \
+    graphite_ksu_libksud
+endif
+
 # Google's lockscreen clocks from the stock image, refreshed by tools/apps/import-pixel-clocks.sh
 PRODUCT_PACKAGES += \
     SystemUIClocks-BigNum \

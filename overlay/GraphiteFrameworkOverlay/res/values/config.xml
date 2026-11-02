@@ -3,4 +3,6 @@
     <!-- Graphite: Lawnchair provides Recents (Quickstep) -->
     <string name="config_recentsComponentName" translatable="false"
             >app.lawnchair/com.android.quickstep.RecentsActivity</string>
+    <!-- Smartspacer shows notification based cards without a setup step -->
+    <string name="config_defaultListenerAccessPackages" translatable="false">com.android.launcher3:com.kieronquinn.app.smartspacer</string>
 </resources>
