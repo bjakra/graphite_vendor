@@ -1,0 +1,12 @@
+// Smartspacer (Graphite fork without Firebase or Play Services, built by tools/apps/build-smartspacer.sh).
+// A normal system app: no privileged access and no special signature.
+android_app_import {
+    name: "GraphiteSmartspacer",
+    apk: "Smartspacer.apk",
+    certificate: "testkey",
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+    system_ext_specific: true,
+}

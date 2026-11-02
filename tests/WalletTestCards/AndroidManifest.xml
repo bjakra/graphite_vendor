@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.graphite.wallettest">
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <application android:label="Wallet Test Cards" android:icon="@android:drawable/ic_menu_agenda">
+        <activity android:name=".OpenActivity" android:exported="true"
+            android:label="Wallet Test Cards">
+            <intent-filter>
+                <action android:name="android.service.quickaccesswallet.action.VIEW_WALLET" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SecureActivity" android:exported="true"
+            android:label="Protected Test Screen" />
+        <service android:name=".TestCardsService" android:exported="true"
+            android:label="Wallet Test Cards"
+            android:permission="android.permission.BIND_QUICK_ACCESS_WALLET_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.quickaccesswallet.QuickAccessWalletService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="android.quickaccesswallet"
+                android:resource="@xml/wallet" />
+        </service>
+        <service android:name=".TestPaymentService" android:exported="true"
+            android:label="Wallet Test Cards"
+            android:permission="android.permission.BIND_NFC_SERVICE">
+            <intent-filter>
+                <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE" />
+            </intent-filter>
+            <meta-data android:name="android.nfc.cardemulation.host_apdu_service"
+                android:resource="@xml/apdu" />
+        </service>
+    </application>
+</manifest>

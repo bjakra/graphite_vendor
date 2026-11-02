@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="description">Made-up cards for testing</string>
+    <string name="short_label">Test Cards</string>
+    <string name="long_label">Open Wallet Test Cards</string>
+</resources>

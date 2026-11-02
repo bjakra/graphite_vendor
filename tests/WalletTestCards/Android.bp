@@ -1,0 +1,12 @@
+// Test wallet with made-up cards, for trying the power menu's wallet on the emulator, plus a
+// FLAG_SECURE screen for testing capture overrides.
+// Not in PRODUCT_PACKAGES, so it never ships: adb install, then
+//   adb shell cmd role add-role-holder android.app.role.WALLET org.graphite.wallettest
+android_test_helper_app {
+    name: "GraphiteWalletTestCards",
+    srcs: ["src/**/*.kt"],
+    resource_dirs: ["res"],
+    manifest: "AndroidManifest.xml",
+    sdk_version: "current",
+    min_sdk_version: "30",
+}

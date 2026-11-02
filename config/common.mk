@@ -8,7 +8,9 @@ PRODUCT_PACKAGES += \
 
 # Lawnchair: default home and recents provider (prebuilt/Lawnchair, overlay in overlay/)
 PRODUCT_PACKAGES += \
-    GraphiteLawnchair
+    GraphiteLawnchair \
+    GraphiteClassicPowerMenu \
+    GraphiteSmartspacer
 
 # Google's lockscreen clocks from the stock image, refreshed by tools/apps/import-pixel-clocks.sh
 PRODUCT_PACKAGES += \
