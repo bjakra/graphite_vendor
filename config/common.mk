@@ -3,7 +3,8 @@
 
 # Graphite settings app (Settings → System → Graphite)
 PRODUCT_PACKAGES += \
-    GraphiteParts
+    GraphiteParts \
+    GraphiteWeather
 
 # Lawnchair: default home and recents provider (prebuilt/Lawnchair, overlay in overlay/)
 PRODUCT_PACKAGES += \
