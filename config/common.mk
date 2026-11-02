@@ -13,9 +13,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GraphiteSearch
 
-# Google's lockscreen clocks, imported from the stock image (tools/apps/import-pixel-clocks.sh).
-# Proprietary, so not in this repo.
-ifneq ($(wildcard vendor/graphite/prebuilt/PixelClocks/Android.bp),)
+# Google's lockscreen clocks from the stock image, refreshed by tools/apps/import-pixel-clocks.sh
 PRODUCT_PACKAGES += \
     SystemUIClocks-BigNum \
     SystemUIClocks-Calligraphy \
@@ -24,7 +22,6 @@ PRODUCT_PACKAGES += \
     SystemUIClocks-Metro \
     SystemUIClocks-NumOverlap \
     SystemUIClocks-Weather
-endif
 
 # Resource overlays for GrapheneOS components (recents provider, SystemUI's plugin allowlist).
 # Named RRO modules, not PRODUCT_PACKAGE_OVERLAYS: that generates

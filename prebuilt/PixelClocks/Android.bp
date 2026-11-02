@@ -1,0 +1,112 @@
+android_app_import {
+    name: "SystemUIClocks-BigNum",
+    owner: "google",
+    apk: "SystemUIClocks-BigNum.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+}
+
+android_app_import {
+    name: "SystemUIClocks-Calligraphy",
+    owner: "google",
+    apk: "SystemUIClocks-Calligraphy.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+}
+
+android_app_import {
+    name: "SystemUIClocks-Growth",
+    owner: "google",
+    apk: "SystemUIClocks-Growth.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+}
+
+android_app_import {
+    name: "SystemUIClocks-Inflate",
+    owner: "google",
+    apk: "SystemUIClocks-Inflate.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+}
+
+android_app_import {
+    name: "SystemUIClocks-Metro",
+    owner: "google",
+    apk: "SystemUIClocks-Metro.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+}
+
+android_app_import {
+    name: "SystemUIClocks-NumOverlap",
+    owner: "google",
+    apk: "SystemUIClocks-NumOverlap.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+}
+
+android_app_import {
+    name: "SystemUIClocks-Weather",
+    owner: "google",
+    apk: "SystemUIClocks-Weather.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+}
+
