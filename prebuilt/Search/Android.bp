@@ -1,0 +1,22 @@
+// Graphite Search (PixelishSearch fork), built by tools/apps/build-search.sh. Lawnchair's hotseat
+// search bar opens it. Privileged so its quick toggles get WRITE_SECURE_SETTINGS without adb.
+android_app_import {
+    name: "GraphiteSearch",
+    apk: "Search.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "androidx.window.sidecar",
+    ],
+    required: ["privapp-permissions-graphite-search"],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-graphite-search",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+    src: "privapp-permissions-graphite-search.xml",
+    filename_from_src: true,
+}

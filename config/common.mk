@@ -10,6 +10,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GraphiteLawnchair
 
+# Search app, opened by Lawnchair's hotseat search bar (prebuilt/Search)
+PRODUCT_PACKAGES += \
+    GraphiteSearch
+
 # Resource overlays for GrapheneOS components (recents provider, SystemUI's plugin allowlist).
 # Named RRO modules, not PRODUCT_PACKAGE_OVERLAYS: that generates
 # framework-res__<device>__auto_generated_rro_product, which conflicts with the module of the
