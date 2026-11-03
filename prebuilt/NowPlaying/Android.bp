@@ -8,4 +8,8 @@ android_app_import {
     apk: "NowPlaying.apk",
     certificate: "platform",
     system_ext_specific: true,
+    // Run from the APK as tested: AOT-compiled and inlined code could bypass the engine's LSPlant hooks
+    dex_preopt: {
+        enabled: false,
+    },
 }
