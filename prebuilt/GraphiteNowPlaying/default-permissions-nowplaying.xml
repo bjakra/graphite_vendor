@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Graphite: Now Playing only records while it is turned on in Graphite settings (off by default), and everything
+     stays on the phone. These grants replace Ambient Music Mod's permission screen. -->
+<exceptions>
+    <exception package="org.graphite.nowplaying">
+        <permission name="android.permission.RECORD_AUDIO" fixed="false" />
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false" />
+    </exception>
+    <exception package="com.kieronquinn.app.pixelambientmusic">
+        <permission name="android.permission.RECORD_AUDIO" fixed="false" />
+        <permission name="android.permission.READ_PHONE_STATE" fixed="false" />
+        <permission name="android.permission.POST_NOTIFICATIONS" fixed="false" />
+    </exception>
+</exceptions>

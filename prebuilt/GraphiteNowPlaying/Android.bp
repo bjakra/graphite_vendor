@@ -1,0 +1,54 @@
+// Graphite Now Playing: on-device song recognition. Built by tools/apps/build-nowplaying-core.sh from
+// github.com/bjakra/AmbientMusicMod (branch graphite), Ambient Music Mod's logic without its screens, Shizuku or
+// network. Its settings are the Now Playing page in Graphite settings. Recognition itself runs in the engine
+// (prebuilt/NowPlaying, GraphiteNowPlayingEngine).
+
+// The core: records, schedules, keeps history and settings; privileged for recording in the background
+// (CAPTURE_AUDIO_HOTWORD) and for opening the downloader's network only during a database update.
+android_app_import {
+    name: "GraphiteNowPlaying",
+    apk: "GraphiteNowPlaying.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    required: [
+        "GraphiteMusicDb",
+        "GraphiteNowPlayingEngine",
+        "privapp-permissions-nowplaying",
+        "default-permissions-nowplaying",
+        "sysconfig-nowplaying",
+    ],
+}
+
+// The database downloader: the only Now Playing part with INTERNET, which the core grants only while a database
+// update the user started or scheduled runs, and which only reaches Google's music database storage.
+android_app_import {
+    name: "GraphiteMusicDb",
+    apk: "GraphiteMusicDb.apk",
+    certificate: "platform",
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-nowplaying",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+    src: "privapp-permissions-nowplaying.xml",
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "default-permissions-nowplaying",
+    system_ext_specific: true,
+    sub_dir: "default-permissions",
+    src: "default-permissions-nowplaying.xml",
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "sysconfig-nowplaying",
+    system_ext_specific: true,
+    sub_dir: "sysconfig",
+    src: "sysconfig-nowplaying.xml",
+    filename_from_src: true,
+}

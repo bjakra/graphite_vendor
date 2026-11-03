@@ -30,6 +30,11 @@ PRODUCT_PACKAGES += \
     SystemUIClocks-NumOverlap \
     SystemUIClocks-Weather
 
+# Now Playing: on-device song recognition (core, database downloader and engine), off until turned on in
+# Graphite settings. See docs/song-recognition-plan.md in the Graphite repo.
+PRODUCT_PACKAGES += \
+    GraphiteNowPlaying
+
 # Resource overlays for GrapheneOS components (recents provider, SystemUI's plugin allowlist).
 # Named RRO modules, not PRODUCT_PACKAGE_OVERLAYS: that generates
 # framework-res__<device>__auto_generated_rro_product, which conflicts with the module of the

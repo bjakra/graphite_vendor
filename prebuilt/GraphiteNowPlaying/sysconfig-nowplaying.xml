@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Graphite: Now Playing schedules its recognitions itself (Ambient Music Mod asked the user to turn off battery
+     optimisation for this); without it, recognitions stop in Doze. -->
+<config>
+    <allow-in-power-save package="org.graphite.nowplaying" />
+</config>
