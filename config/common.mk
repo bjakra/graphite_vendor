@@ -8,9 +8,7 @@ PRODUCT_PACKAGES += \
 
 # Lawnchair: default home and recents provider (prebuilt/Lawnchair, overlay in overlay/)
 PRODUCT_PACKAGES += \
-    GraphiteLawnchair \
-    GraphiteClassicPowerMenu \
-    GraphiteSmartspacer
+    GraphiteLawnchair
 
 # KernelSU-Next manager (arm64 only): real devices, not the emulator
 ifeq ($(filter sdk_phone%,$(TARGET_PRODUCT)),)
