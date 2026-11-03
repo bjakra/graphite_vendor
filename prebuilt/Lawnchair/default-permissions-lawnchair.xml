@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Graphite: upcoming events in At a Glance, read on the device only. Can be revoked in app info. -->
+<exceptions>
+    <exception package="app.lawnchair">
+        <permission name="android.permission.READ_CALENDAR" fixed="false" />
+    </exception>
+</exceptions>

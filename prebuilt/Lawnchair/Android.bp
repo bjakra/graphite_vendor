@@ -12,7 +12,10 @@ android_app_import {
         "androidx.window.extensions",
         "androidx.window.sidecar",
     ],
-    required: ["privapp-permissions-lawnchair"],
+    required: [
+        "privapp-permissions-lawnchair",
+        "default-permissions-lawnchair",
+    ],
 }
 
 prebuilt_etc {
@@ -20,5 +23,13 @@ prebuilt_etc {
     system_ext_specific: true,
     sub_dir: "permissions",
     src: "privapp-permissions-lawnchair.xml",
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "default-permissions-lawnchair",
+    system_ext_specific: true,
+    sub_dir: "default-permissions",
+    src: "default-permissions-lawnchair.xml",
     filename_from_src: true,
 }
