@@ -7,4 +7,14 @@
     <string name="config_defaultListenerAccessPackages" translatable="false">com.android.launcher3:app.lawnchair</string>
     <!-- Lock screen double tap to sleep (Graphite settings, Lock screen) -->
     <bool name="config_supportDoubleTapSleep">true</bool>
+    <!-- Graphite: GrapheneOS restricts runtime code changes for system apps. The Now Playing engine
+         (Google's recognition, rebuilt by Kieron Quinn) hooks its own runtime with LSPlant/AliuHook, which
+         needs it, so this one package is exempt, like Vanadium for its JIT. This relaxes a GrapheneOS
+         hardening for that package only (user decision 2026-11-03). The list replaces GrapheneOS' own,
+         so its entries are kept. -->
+    <string-array translatable="false" name="system_pkgs_allowed_memory_dyn_code_loading_by_default">
+        <item>app.vanadium.browser</item>
+        <item>org.chromium.chrome</item>
+        <item>com.kieronquinn.app.pixelambientmusic</item>
+    </string-array>
 </resources>
