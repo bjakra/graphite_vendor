@@ -1,0 +1,11 @@
+// Now Playing engine: Kieron Quinn's rebuild of Google's Android System Intelligence, cut down to on-device music
+// recognition (fork bjakra/NowPlaying, branch graphite), built by tools/apps/build-nowplaying.sh from Google's APK.
+// Headless: no launcher icon and no network permission. Graphite settings (org.graphite.parts) hosts it; the music
+// database downloads go through org.graphite.musicdb, only when the user asks for an update.
+// Platform signed so it and Graphite settings trust each other through signature permissions.
+android_app_import {
+    name: "GraphiteNowPlayingEngine",
+    apk: "NowPlaying.apk",
+    certificate: "platform",
+    system_ext_specific: true,
+}
