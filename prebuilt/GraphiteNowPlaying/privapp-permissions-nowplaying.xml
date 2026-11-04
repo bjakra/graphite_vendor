@@ -13,6 +13,7 @@
         <permission name="android.permission.GRANT_RUNTIME_PERMISSIONS" />
         <permission name="android.permission.OBSERVE_SENSOR_PRIVACY" />
         <permission name="android.permission.POST_NOTIFICATIONS" />
+        <permission name="android.permission.POST_PROMOTED_NOTIFICATIONS" />
         <permission name="android.permission.RECEIVE_BOOT_COMPLETED" />
         <permission name="android.permission.RECORD_AUDIO" />
         <permission name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
