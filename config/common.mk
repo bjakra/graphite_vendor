@@ -10,10 +10,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     GraphiteLawnchair
 
-# KernelSU-Next manager and the 3D wallpaper (arm64 only): real devices, not the emulator
+# KernelSU-Next manager (arm64 only): real devices, not the emulator
 ifeq ($(filter sdk_phone%,$(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += \
-    GraphiteDepthWallpaper \
     GraphiteKernelSUNext \
     graphite_ksu_libadbroot \
     graphite_ksu_libandroidx.graphics.path \
